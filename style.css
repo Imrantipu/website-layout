@@ -1,0 +1,208 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+
+/* Learning about flexbox */
+.container {
+    border: 3px dotted purple;
+    display: flex;
+    align-items: stretch;
+    /* justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    height: 300px;
+}
+
+.box {
+    font-size: 3ex;
+    font-weight: 700;
+    border: 3px dashed peru;
+    width: 100px;
+    /* height: 100px; */
+}
+
+#box-2 {
+    flex-grow: 1;
+}
+
+/* Learning about login */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.login-form input {
+    margin-top: 1em;
+    font-size: 1.5em;
+    padding: 5px 10px;
+}
+
+.login-form input[type="submit"] {
+    background-color: goldenrod;
+    border: 0;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+/* Learning about grid */
+.container1 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+}
+
+.item {
+    border: 1px solid indianred;
+    font-size: 1.5em;
+}
+
+/* Making a calender */
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 30px repeat(5, 75px);
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.date,
+.day {
+    background-color: #a4def5;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.other-month,
+.day {
+    background-color: lightgray;
+}
+
+.day {
+    font-size: 1.5em;
+}
+
+/* Responsive html */
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.food {
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.food img {
+    width: 75%;
+}
+
+/* smaller device(bootstrap breakpoints) */
+@media screen and (max-width: 576px) {
+    .container2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .food {
+        background-color: orange;
+    }
+}
+
+/* medium device */
+@media screen and (min-width:577px) and (max-width: 992px) {
+    .container2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food {
+        background-color: blueviolet;
+    }
+}
+
+/* Responsive website.html */
+
+h1 {
+    font-size: 10vw;
+}
+
+.tiger img {
+    width: 100%;
+}
+
+.container-two {
+    display: flex;
+}
+
+.container-two .split {
+    width: 50%;
+}
+
+/* make image responsive inside */
+.split img {
+    width: 100%;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.food1 {
+    border: 2px solid indianred;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.food1 img {
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .container-two {
+        flex-direction: column-reverse;
+    }
+
+    .container-two .split {
+        width: 100%;
+    }
+
+    .container3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 700px) {
+    .container3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+</style>
